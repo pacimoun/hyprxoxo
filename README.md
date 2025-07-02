@@ -168,7 +168,7 @@ QT_QPA_PLATFORM=xcb ./AmneziaVPN_Linux_Installer.bin
 
 ### <code>apps</code>
 <table>
-    <tr><td>yandex-browser</td><td>browser</td></tr>
+    <tr><td>vivaldi</td><td>browser</td></tr>
     <tr><td>discord</td><td>communication</td></tr>
     <tr><td>telegram-desktop</td><td>messenger</td></tr>
     <tr><td>alacritty</td><td>terminal</td></tr>
@@ -177,7 +177,6 @@ QT_QPA_PLATFORM=xcb ./AmneziaVPN_Linux_Installer.bin
     <tr><td>qtfm</td><td>file manager</td></tr>
     <tr><td>visual-studio-code-bin</td><td>gui code editor</td></tr>
     <tr><td>vim</td><td>text editor</td></tr>
-    <tr><td>notion-app-electron</td><td>notes</td></tr>
     <tr><td>p7zip</td><td>file archiver</td></tr>
     <tr><td>qbittorrent</td><td>torrent tracker</td></tr>
     <tr><td>steam</td><td>steam launcher and runtime</td></tr>
