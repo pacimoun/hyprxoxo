@@ -39,15 +39,6 @@ cd ./hyprxoxo
 
 Please reboot after the install script completes and takes you to sddm login screen (or black screen) for the first time.
 
-#### Apps that need manual installation
-
-After installation finish some apps will be placed into `installers` folders to install it follow next instructions:
-**AmneziaVPN**
-```shell
-cd installers
-QT_QPA_PLATFORM=xcb ./AmneziaVPN_Linux_Installer.bin
-```
-
 ### Theming
 
 - Available themes
@@ -169,17 +160,15 @@ QT_QPA_PLATFORM=xcb ./AmneziaVPN_Linux_Installer.bin
 ### <code>apps</code>
 <table>
     <tr><td>vivaldi</td><td>browser</td></tr>
-    <tr><td>discord</td><td>communication</td></tr>
     <tr><td>telegram-desktop</td><td>messenger</td></tr>
     <tr><td>alacritty</td><td>terminal</td></tr>
     <tr><td>neofetch</td><td>fetch tool</td></tr>
     <tr><td>btop</td><td>system monitor</td></tr>
     <tr><td>qtfm</td><td>file manager</td></tr>
     <tr><td>visual-studio-code-bin</td><td>gui code editor</td></tr>
-    <tr><td>vim</td><td>text editor</td></tr>
+    <tr><td>gvim</td><td>text editor</td></tr>
     <tr><td>p7zip</td><td>file archiver</td></tr>
     <tr><td>qbittorrent</td><td>torrent tracker</td></tr>
-    <tr><td>steam</td><td>steam launcher and runtime</td></tr>
 </table>
 
 ### <code>shell</code>
@@ -209,7 +198,7 @@ QT_QPA_PLATFORM=xcb ./AmneziaVPN_Linux_Installer.bin
     <tr><td><kbd>Super</kbd> + <kbd>T</kbd></td><td>launch alacritty terminal</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>E</kbd></td><td>launch file manager</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>C</kbd></td><td>launch vscode</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Y</kbd></td><td>launch yandex browser</td></tr>
+    <tr><td><kbd>Super</kbd> + <kbd>B</kbd></td><td>launch vivaldi browser</td></tr>
 </table>
 
 ### <code>Rofi</code>
@@ -217,7 +206,6 @@ QT_QPA_PLATFORM=xcb ./AmneziaVPN_Linux_Installer.bin
     <tr><td><kbd>Super</kbd> + <kbd>A</kbd></td><td>launch desktop applications</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>Tab</kbd></td><td>switch between opened applications</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>R</kbd></td><td>browse system files</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td><td>launch steam games</td></tr>
 </table>
 
 ### <code>Audio control</code>
