@@ -53,7 +53,7 @@ Wall_Change()
 Wall_Set()
 {
     hyprctl hyprpaper wallpaper ",$(realpath $wallSet)"
-    sed -i "s|^wallpaper.*$|wallpaper = ,$(realpath $wallSet)|" $HOME/.config/hypr/hyprpaper.conf
+    sed -i "s|^  path.*$|  path = $(realpath $wallSet)|" $HOME/.config/hypr/hyprpaper.conf
 }
 
 

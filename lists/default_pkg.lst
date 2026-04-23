@@ -7,7 +7,6 @@ pipewire-pulse
 wireplumber
 networkmanager
 network-manager-applet
-dhcpcd
 bluez
 blueman
 qt5ct
