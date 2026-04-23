@@ -7,14 +7,11 @@ if [ $? -ne 0 ]; then
 fi
 
 # rules
-if [ ! -f /etc/udev/rules.d/81-bluetooth-hci.rules ]; then
-  sudo cp $CloneDir/rules/81-bluetooth-hci.rules /etc/udev/rules.d/
-else
-  cat $CloneDir/rules/81-bluetooth-hci.rules | sudo tee -a /etc/udev/rules.d/81-bluetooth-hci.rules
-fi
+sudo cp $CloneDir/rules/81-bluetooth-hci.rules /etc/udev/rules.d/
+sudo cp $CloneDir/rules/30-amdgpu-high-power.rules /etc/udev/rules.d/
 
-if [ ! -f /etc/udev/rules.d/30-amdgpu-high-power.rules ]; then
-  sudo cp $CloneDir/rules/30-amdgpu-high-power.rules /etc/udev/rules.d/
-else
-  cat $CloneDir/rules/30-amdgpu-high-power.rules | sudo tee -a /etc/udev/rules.d/30-amdgpu-high-power.rules
-fi
+# sysctl configs
+sudo cp $CloneDir/sysconfigs/99-disable-ipv6.conf /etc/sysctl.d/
+
+# NetworkManager configs
+sudo cp $CloneDir/sysconfigs/disable-ipv6.conf /etc/NetworkManager/conf.d/disable-ipv6.conf

@@ -136,4 +136,7 @@ EOF
     service_ctl "$service"
   done <./lists/system_ctl.lst
 
+  sudo sysctl --system
+  sudo systemctl restart NetworkManager
+
 fi
