@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>-- xoxo --</h1>
+  <h1>-- pacimoun --</h1>
   <img width="250" src="https://github.com/pacimoun/hyprxoxo/blob/main/source/concepts/arch.svg">
   <br>
   <img src="https://img.shields.io/github/last-commit/pacimoun/hyprxoxo?style=for-the-badge&color=ffb4a2&labelColor=201a19">
