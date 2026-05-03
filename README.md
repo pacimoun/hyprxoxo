@@ -1,9 +1,9 @@
 <div align="center">
   <h1>-- xoxo --</h1>
-  <img width="250" src="https://github.com/Xoxotynn/hyprxoxo/blob/main/source/concepts/arch.svg">
+  <img width="250" src="https://github.com/pacimoun/hyprxoxo/blob/main/source/concepts/arch.svg">
   <br>
-  <img src="https://img.shields.io/github/last-commit/Xoxotynn/hyprxoxo?style=for-the-badge&color=ffb4a2&labelColor=201a19">
-  <img src="https://img.shields.io/github/repo-size/Xoxotynn/hyprxoxo?style=for-the-badge&color=a8c7ff&labelColor=1a1b1f">
+  <img src="https://img.shields.io/github/last-commit/pacimoun/hyprxoxo?style=for-the-badge&color=ffb4a2&labelColor=201a19">
+  <img src="https://img.shields.io/github/repo-size/pacimoun/hyprxoxo?style=for-the-badge&color=a8c7ff&labelColor=1a1b1f">
 </div>
 
 ## About
@@ -24,7 +24,7 @@ After minimal Arch install (with grub), clone and execute -
 
 ```shell
 pacman -Sy git
-git clone https://github.com/Xoxotynn/hyprxoxo.git
+git clone https://github.com/pacimoun/hyprxoxo.git
 cd ./hyprxoxo
 ./install.sh
 ```
@@ -48,38 +48,34 @@ Please reboot after the install script completes and takes you to sddm login scr
 
 <div align="center"><b>Catppuccin-Mocha</b></div>
 <table>
-    <tr><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/theme_mocha_1.png"></td><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/theme_mocha_2.png"></td></tr>
+    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_mocha_1.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_mocha_2.png"></td></tr>
 </table>
 
 <div align="center"><b>Catppuccin-Latte</b></div>
 <table>
-    <tr><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/theme_latte_1.png"></td><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/theme_latte_2.png"></td></tr>
+    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_latte_1.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_latte_2.png"></td></tr>
 </table>
 
 ## Styles
 
 <div align="center"><b>Rofi Launcher Styles</b></div>
 <table>
-    <tr><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_1.png"></td><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_2.png"></td></tr>
-    <tr><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_3.png"></td><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_4.png"></td></tr>
-    <tr><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_5.png"></td><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_6.png"></td></tr>
-    <tr><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_7.png"></td><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_8.png"></td></tr>
+    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_1.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_2.png"></td></tr>
+    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_3.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_4.png"></td></tr>
+    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_5.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_6.png"></td></tr>
+    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_7.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_8.png"></td></tr>
 </table>
 
 <div align="center"><b>Wlogout Menu</b></div>
 <table>
-    <tr><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/wlog_style_1.png"></td><td><img src="https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/wlog_style_2.png"></td></tr>
+    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/wlog_style_1.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/wlog_style_2.png"></td></tr>
 </table>
 
 | Selection      |                                              Screenshot                                                             |
 | :--------------| :-----------------------------------------------------------------------------------------------------------------: |
-| Theme          | ![Theme Select](https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/theme_select.png)            |
-| Wallpaper      | ![Wallpaper Select](https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/walls_select.png)        |
-| Launcher Style | ![Launcher Style Select](https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/rofi_style_sel.png) |
-
-|                                                Game Launcher                                                 |
-| :----------------------------------------------------------------------------------------------------------: |
-| ![Game Launcher](https://raw.githubusercontent.com/Xoxotynn/hyprxoxo/main/source/assets/game_launch.png)     |
+| Theme          | ![Theme Select](https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_select.png)            |
+| Wallpaper      | ![Wallpaper Select](https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/walls_select.png)        |
+| Launcher Style | ![Launcher Style Select](https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_sel.png) |
 
 ## Packages
 
