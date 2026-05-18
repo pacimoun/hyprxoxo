@@ -15,3 +15,10 @@ sudo cp $CloneDir/sysconfigs/99-disable-ipv6.conf /etc/sysctl.d/
 
 # NetworkManager configs
 sudo cp $CloneDir/sysconfigs/disable-ipv6.conf /etc/NetworkManager/conf.d/disable-ipv6.conf
+
+# reflector config
+sudo mkdir -p /etc/xdg/reflector
+sudo cp $CloneDir/sysconfigs/reflector.conf /etc/xdg/reflector/reflector.conf
+
+sudo systemctl start reflector.service
+sudo systemctl enable --now reflector.timer
