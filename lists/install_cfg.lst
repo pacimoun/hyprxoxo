@@ -1,9 +1,7 @@
 ${HOME}|.zshrc .p10k.zsh|zsh
 ${HOME}|.gtkrc-2.0|nwg-look
-${HOME}|.vimrc .vim|gvim
 ${HOME}/.config|alacritty|alacritty-git
 ${HOME}/.config|btop|btop
-${HOME}/.config|Code|visual-studio-code-bin
 ${HOME}/.config|dunst|dunst
 ${HOME}/.config|nwg-look gtk-3.0 gtk-4.0|nwg-look
 ${HOME}/.config|hypr|hyprland-git

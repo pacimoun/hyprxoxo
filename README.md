@@ -162,7 +162,7 @@ Please reboot after the install script completes and takes you to sddm login scr
     <tr><td>btop</td><td>system monitor</td></tr>
     <tr><td>qtfm</td><td>file manager</td></tr>
     <tr><td>visual-studio-code-bin</td><td>gui code editor</td></tr>
-    <tr><td>gvim</td><td>text editor</td></tr>
+    <tr><td>nano</td><td>text editor</td></tr>
     <tr><td>p7zip</td><td>file archiver</td></tr>
     <tr><td>qbittorrent</td><td>torrent tracker</td></tr>
 </table>
