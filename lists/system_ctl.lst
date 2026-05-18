@@ -1,3 +1,4 @@
-NetworkManager
-bluetooth
-sddm
+NetworkManager.service
+bluetooth.service
+sddm.service
+reflector.timer

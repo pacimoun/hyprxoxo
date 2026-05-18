@@ -1,82 +1,132 @@
 #!/usr/bin/env sh
 
-ScrDir=$(dirname $(realpath $0))
-source $ScrDir/globalcontrol.sh
+set -u
 
-# define functions
+print_error() {
+    cat << EOF
+Usage:
+    volumecontrol.sh -o <action> [step]
+    volumecontrol.sh -i <action> [step]
 
-function print_error
-{
-  cat <<"EOF"
-    ./volumecontrol.sh -[device] <action>
-    ...valid device are...
-        i -- [i]nput decive
-        o -- [o]utput device
-    ...valid actions are...
-        i -- <i>ncrease volume [+5]
-        d -- <d>ecrease volume [-5]
-        m -- <m>ute [x]
+Devices:
+    -o    output device / speakers
+    -i    input device / microphone
+
+Actions:
+    i     increase volume
+    d     decrease volume
+    m     mute / unmute
+
+Examples:
+    volumecontrol.sh -o i
+    volumecontrol.sh -o d 10
+    volumecontrol.sh -i m
 EOF
 }
 
-function notify_vol
-{
-  vol=$(pamixer $srce --get-volume | cat)
-  angle="$(((($vol + 2) / 5) * 5))"
-  ico="${icodir}/vol-${angle}.svg"
-  bar=$(seq -s "." $(($vol / 15)) | sed 's/[0-9]//g')
-  dunstify "t2" -a "$vol$bar" "$nsink" -i $ico -r 91190 -t 500
-}
+device=""
+pamixer_target=""
+device_icon=""
 
-function notify_mute
-{
-  mute=$(pamixer $srce --get-mute | cat)
-  if [ "$mute" == "true" ]; then
-    dunstify "t2" -a "muted" "$nsink" -i ${icodir}/muted-${dvce}.svg -r 91190 -t 500
-  else
-    dunstify "t2" -a "unmuted" "$nsink" -i ${icodir}/unmuted-${dvce}.svg -r 91190 -t 500
-  fi
-}
-
-# set device source
-
-while getopts io SetSrc; do
-  case $SetSrc in
-  i)
-    nsink=$(pamixer --list-sources | grep "_input." | head -1 | awk -F '" "' '{print $NF}' | sed 's/"//')
-    srce="--default-source"
-    dvce="mic"
-    ;;
-  o)
-    nsink=$(pamixer --get-default-sink | grep "_output." | awk -F '" "' '{print $NF}' | sed 's/"//')
-    srce=""
-    dvce="speaker"
-    ;;
-  esac
+while getopts "io" opt; do
+    case "$opt" in
+        i)
+            device="input"
+            pamixer_target="--default-source"
+            device_icon="mic"
+            ;;
+        o)
+            device="output"
+            pamixer_target=""
+            device_icon="speaker"
+            ;;
+        *)
+            print_error
+            exit 1
+            ;;
+    esac
 done
 
-if [ $OPTIND -eq 1 ]; then
-  print_error
+shift $((OPTIND - 1))
+
+action="${1:-}"
+step="${2:-5}"
+
+if [ -z "$device" ] || [ -z "$action" ]; then
+    print_error
+    exit 1
 fi
 
-# set device action
+icon_dir="$HOME/.config/dunst/icons/vol"
+notify_id=91190
 
-shift $((OPTIND - 1))
-step="${2:-5}"
-icodir="~/.config/dunst/icons/vol"
+get_device_name() {
+    if [ "$device" = "input" ]; then
+        pamixer --list-sources 2>/dev/null \
+            | grep "_input." \
+            | head -1 \
+            | awk -F '" "' '{print $NF}' \
+            | sed 's/"//'
+    else
+        pamixer --get-default-sink 2>/dev/null \
+            | awk -F '" "' '{print $NF}' \
+            | sed 's/"//'
+    fi
+}
 
-case $1 in
-i)
-  pamixer $srce -i ${step}
-  notify_vol
-  ;;
-d)
-  pamixer $srce -d ${step}
-  notify_vol
-  ;;
-m)
-  pamixer $srce -t
-  notify_mute
-  ;;
-*) print_error ;;
+notify_volume() {
+    vol="$(pamixer $pamixer_target --get-volume)"
+    rounded="$(( ((vol + 2) / 5) * 5 ))"
+    icon="$icon_dir/vol-$rounded.svg"
+    name="$(get_device_name)"
+
+    [ -f "$icon" ] || icon="$icon_dir/vol-50.svg"
+
+    dunstify \
+        "Volume: ${vol}%" \
+        "${name:-$device}" \
+        -a "volume" \
+        -i "$icon" \
+        -r "$notify_id" \
+        -t 700
+}
+
+notify_mute() {
+    muted="$(pamixer $pamixer_target --get-mute)"
+    name="$(get_device_name)"
+
+    if [ "$muted" = "true" ]; then
+        icon="$icon_dir/muted-$device_icon.svg"
+        text="Muted"
+    else
+        icon="$icon_dir/unmuted-$device_icon.svg"
+        text="Unmuted"
+    fi
+
+    dunstify \
+        "$text" \
+        "${name:-$device}" \
+        -a "volume" \
+        -i "$icon" \
+        -r "$notify_id" \
+        -t 700
+}
+
+case "$action" in
+    i)
+        pamixer $pamixer_target -i "$step"
+        notify_volume
+        ;;
+    d)
+        pamixer $pamixer_target -d "$step"
+        notify_volume
+        ;;
+    m)
+        pamixer $pamixer_target -t
+        notify_mute
+        ;;
+    *)
+        print_error
+        exit 1
+        ;;
 esac

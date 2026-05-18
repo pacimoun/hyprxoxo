@@ -1,0 +1,106 @@
+@import "~/.config/rofi/config.rasi"
+
+/* Power menu overrides */
+
+configuration {
+    show-icons: false;
+    font: "JetBrainsMono Nerd Font 16";
+}
+
+window {
+    width: 68ch;
+    height: 5em;
+    location: center;
+    anchor: center;
+    border: 2px;
+    border-radius: 28px;
+    padding: 0px;
+}
+
+mainbox {
+    enabled: true;
+    orientation: vertical;
+    children: [ "listview" ];
+    padding: 1.1em;
+    spacing: 0px;
+    background-color: @main-bg;
+}
+
+inputbar {
+    enabled: false;
+}
+
+entry {
+    enabled: false;
+}
+
+listbox {
+    enabled: false;
+}
+
+mode-switcher {
+    enabled: false;
+}
+
+textbox {
+    enabled: true;
+    text-color: @main-fg;
+    background-color: transparent;
+    font: "JetBrainsMono Nerd Font 14";
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+listview {
+    enabled: true;
+    columns: 4;
+    lines: 1;
+    spacing: 0.8em;
+    padding: 0px;
+    margin: 0px;
+    fixed-height: true;
+    fixed-columns: true;
+    dynamic: false;
+    cycle: true;
+    scrollbar: false;
+    layout: vertical;
+    background-color: transparent;
+    text-color: @main-fg;
+}
+
+element {
+    enabled: true;
+    orientation: horizontal;
+    spacing: 0.4em;
+    padding: 0.9em 0.8em;
+    border-radius: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    text-color: @main-fg;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @main-fg;
+}
+
+element selected.normal {
+    background-color: @select-bg;
+    text-color: @select-fg;
+}
+
+element-icon {
+    enabled: false;
+    size: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+element-text {
+    enabled: true;
+    font: "JetBrainsMono Nerd Font 15";
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit;
+}

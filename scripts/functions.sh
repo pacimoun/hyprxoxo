@@ -6,16 +6,14 @@ CloneDir=$(dirname $(dirname $(realpath $0)))
 GitPkgDir=$HOME/Packages
 
 service_ctl() {
-  local ServChk=$1
+    local unit="$1"
 
-  if [[ $(systemctl list-units --all -t service --full --no-legend "${ServChk}.service" | sed 's/^\s*//g' | cut -f1 -d' ') == "${ServChk}.service" ]]; then
-    echo "$ServChk service is already enabled, enjoy"
-  else
-    echo "$ServChk service is not running, enabling..."
-    sudo systemctl enable "${ServChk}".service
-    sudo systemctl start "${ServChk}".service
-    echo "$ServChk service enabled, and running"
-  fi
+    if systemctl is-enabled "$unit" &>/dev/null; then
+        echo "$unit is already enabled"
+    else
+        echo "enabling $unit..."
+        sudo systemctl enable --now "$unit"
+    fi
 }
 
 pkg_installed() {

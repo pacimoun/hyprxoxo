@@ -76,10 +76,6 @@ EOF
   custom_pkg=$1
   cp ./lists/default_pkg.lst ./lists/install_pkg.lst
 
-  if [ -f "$custom_pkg" ] && [ -z "$custom_pkg" ]; then
-    cat "$custom_pkg" >>./lists/install_pkg.lst
-  fi
-
   #--------------------------------#
   # install packages from the list #
   #--------------------------------#

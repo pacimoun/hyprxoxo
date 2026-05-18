@@ -21,7 +21,13 @@ cat ./lists/install_fnt.lst | while read lst; do
   fi
 
   echo "uncompressing ${fnt}.tar.gz --> ${tgt}..."
-  sudo tar -xzf ${CloneDir}/source/arcs/${fnt}.tar.gz -C ${tgt}/
+  if [[ "$tgt" == "$HOME"* ]]; then
+    mkdir -p "$tgt"
+    tar -xzf "$archive" -C "$tgt"
+  else
+    sudo mkdir -p "$tgt"
+    sudo tar -xzf "$archive" -C "$tgt"
+  fi
 done
 
 echo "rebuilding font cache..."

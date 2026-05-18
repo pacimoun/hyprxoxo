@@ -47,11 +47,9 @@ else
   exit 1
 fi
 
-echo "installing ${aurhlpr}-git..."
 if [ -f /usr/lib/debug/usr/bin/yay.debug ]; then
   sudo rm /usr/lib/debug/usr/bin/yay.debug
 fi
-$aurhlpr ${use_default} -S "${aurhlpr}-git"
 
 if pkg_installed "${aurhlpr}-git"; then
   echo "${aurhlpr}-git installed"

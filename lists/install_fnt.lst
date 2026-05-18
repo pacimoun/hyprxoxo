@@ -1,12 +1,4 @@
-Font_CascadiaCove|$HOME/.local/share/fonts
 Font_JetBrainsMono|$HOME/.local/share/fonts
-Font_MapleNerd|$HOME/.local/share/fonts
-Font_MononokiNerd|$HOME/.local/share/fonts
-Font_FiraCode|$HOME/.local/share/fonts
 Font_NotoSansCJK|/usr/share/fonts
-Gtk_CatppuccinMocha|/usr/share/themes
 Gtk_CatppuccinMocha|$HOME/.themes
-Gtk_CatppuccinLatte|/usr/share/themes
-Gtk_CatppuccinLatte|$HOME/.themes
-Cursor_BibataIce|/usr/share/icons
 Cursor_BibataIce|$HOME/.icons

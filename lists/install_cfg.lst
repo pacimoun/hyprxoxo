@@ -1,14 +1,10 @@
-${HOME}|.zshrc .p10k.zsh|zsh
-${HOME}|.gtkrc-2.0|nwg-look
-${HOME}/.config|alacritty|alacritty-git
-${HOME}/.config|btop|btop
-${HOME}/.config|dunst|dunst
-${HOME}/.config|nwg-look gtk-3.0 gtk-4.0|nwg-look
-${HOME}/.config|hypr|hyprland-git
-${HOME}/.config|Kvantum|kvantum
-${HOME}/.config|neofetch|neofetch
-${HOME}/.config|rofi|rofi
-${HOME}/.config|waybar|waybar
-${HOME}/.config|wlogout|wlogout
-${HOME}/.config|qtfm6|qtfm
-${HOME}/.icons|default|nwg-look
+${HOME}|.zshrc .p10k.zsh .gitconfig
+${HOME}/.config|alacritty
+${HOME}/.config|btop
+${HOME}/.config|dunst
+${HOME}/.config|gtk-3.0 gtk-4.0
+${HOME}/.config|hypr
+${HOME}/.config|Kvantum
+${HOME}/.config|rofi
+${HOME}/.config|swappy
+${HOME}/.config|waybar

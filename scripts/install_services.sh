@@ -8,7 +8,6 @@ fi
 
 # rules
 sudo cp $CloneDir/rules/81-bluetooth-hci.rules /etc/udev/rules.d/
-sudo cp $CloneDir/rules/30-amdgpu-high-power.rules /etc/udev/rules.d/
 
 # sysctl configs
 sudo cp $CloneDir/sysconfigs/99-disable-ipv6.conf /etc/sysctl.d/
@@ -21,4 +20,3 @@ sudo mkdir -p /etc/xdg/reflector
 sudo cp $CloneDir/sysconfigs/reflector.conf /etc/xdg/reflector/reflector.conf
 
 sudo systemctl start reflector.service
-sudo systemctl enable --now reflector.timer

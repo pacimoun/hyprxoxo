@@ -1,6 +1,5 @@
 <div align="center">
   <h1>-- pacimoun --</h1>
-  <img width="250" src="https://github.com/pacimoun/hyprxoxo/blob/main/source/concepts/arch.svg">
   <br>
   <img src="https://img.shields.io/github/last-commit/pacimoun/hyprxoxo?style=for-the-badge&color=ffb4a2&labelColor=201a19">
   <img src="https://img.shields.io/github/repo-size/pacimoun/hyprxoxo?style=for-the-badge&color=a8c7ff&labelColor=1a1b1f">
@@ -8,13 +7,11 @@
 
 ## About
 
-This is a fork of [klpod0s](https://github.com/klpod221/klpod0s) with some changes to make it work on my system and to my liking. I have also added some of my own scripts and configs to make it work better for me and maybe for you too.
-
-Thanks to [klpod221](https://github.com/klpod221) for making this awesome dotfiles repo.
+some dot files for minimal styled hyprland setup
 
 ### Installation
 
-The installation script is made for Arch, but **may** work on some Arch based distros.  
+The installation script is made for Arch  
 
 > **Warning**
 >
@@ -29,157 +26,13 @@ cd ./hyprxoxo
 ./install.sh
 ```
 
-> **Note**
->
-> You can also create your own list (for ex. `custom_apps.lst`) with all your favorite apps and pass the file as a parameter to install it -
->
-> ```shell
-> ./install.sh custom_apps.lst
-> ```
-
 Please reboot after the install script completes and takes you to sddm login screen (or black screen) for the first time.
-
-### Theming
-
-- Available themes
-
-  - [x] Catppuccin-Mocha
-  - [x] Catppuccin-Latte
-
-<div align="center"><b>Catppuccin-Mocha</b></div>
-<table>
-    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_mocha_1.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_mocha_2.png"></td></tr>
-</table>
-
-<div align="center"><b>Catppuccin-Latte</b></div>
-<table>
-    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_latte_1.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_latte_2.png"></td></tr>
-</table>
-
-## Styles
-
-<div align="center"><b>Rofi Launcher Styles</b></div>
-<table>
-    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_1.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_2.png"></td></tr>
-    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_3.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_4.png"></td></tr>
-    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_5.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_6.png"></td></tr>
-    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_7.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_8.png"></td></tr>
-</table>
-
-<div align="center"><b>Wlogout Menu</b></div>
-<table>
-    <tr><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/wlog_style_1.png"></td><td><img src="https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/wlog_style_2.png"></td></tr>
-</table>
-
-| Selection      |                                              Screenshot                                                             |
-| :--------------| :-----------------------------------------------------------------------------------------------------------------: |
-| Theme          | ![Theme Select](https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/theme_select.png)            |
-| Wallpaper      | ![Wallpaper Select](https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/walls_select.png)        |
-| Launcher Style | ![Launcher Style Select](https://raw.githubusercontent.com/pacimoun/hyprxoxo/main/source/assets/rofi_style_sel.png) |
-
-## Packages
-
-### <code>amd</code>
-<table>
-    <tr><td>linux-headers</td><td>headers for main kernel</td></tr>
-    <tr><td>mesa</td><td>amd drivers</td></tr>
-    <tr><td>lib32-mesa</td><td>amd drivers</td></tr>
-    <tr><td>vulkan-radeon</td><td>amd vulkan drivers</td></tr>
-    <tr><td>lib32-vulkan-radeon</td><td>amd vulkan drivers</td></tr>
-    <tr><td>libva-mesa-driver</td><td>amd VA-API</td></tr>
-    <tr><td>lib32-libva-mesa-driver</td><td>amd VA-API</td></tr>
-    <tr><td>mesa-vdpau</td><td>amd VDPAU</td></tr>
-    <tr><td>lib32-mesa-vdpau</td><td>amd VDPAU</td></tr>
-</table>
-
-### <code>utils</code>
-<table>
-    <tr><td>pipewire</td><td>audio and video server</td></tr>
-    <tr><td>pipewire-alsa</td><td>for audio</td></tr>
-    <tr><td>pipewire-audio</td><td>for audio</td></tr>
-    <tr><td>pipewire-jack</td><td>for audio</td></tr>
-    <tr><td>pipewire-pulse</td><td>for audio</td></tr>
-    <tr><td>wireplumber</td><td>audio and video server</td></tr>
-    <tr><td>networkmanager</td><td>network manager</td></tr>
-    <tr><td>network-manager-applet</td><td>nm tray</td></tr>
-    <tr><td>bluez</td><td>for bluetooth</td></tr>
-    <tr><td>bluez-utils</td><td>for bluetooth</td></tr>
-    <tr><td>blueman</td><td>bt tray</td></tr>
-</table>
-
-### <code>login</code>
-<table>
-    <tr><td>sddm-git</td><td>display manager for login</td></tr>
-    <tr><td>qt6-wayland</td><td>for QT wayland XDP</td></tr>
-    <tr><td>qt6-5compat</td><td>for sddm theme</td></tr>
-</table>
-
-### <code>hypr</code>
-<table>
-    <tr><td>hyprland-git</td><td>main window manager</td></tr>
-    <tr><td>hyprshade</td><td>screen shader tool(for bluelight filter)</td></tr>
-    <tr><td>dunst</td><td>graphical notification daemon</td></tr>
-    <tr><td>rofi-lbonn-wayland-git</td><td>app launcher</td></tr>
-    <tr><td>waybar</td><td>status bar</td></tr>
-    <tr><td>hyprpaper</td><td>wallpaper app</td></tr>
-    <tr><td>hyprlock</td><td>lockscreen</td></tr>
-    <tr><td>wlogout</td><td>logout screen</td></tr>
-    <tr><td>grimblast-git</td><td>screenshot tool</td></tr>
-    <tr><td>slurp</td><td>selects region for screenshot/screenshare</td></tr>
-    <tr><td>swappy</td><td>screenshot editor</td></tr>
-    <tr><td>cliphist</td><td>clipboard manager</td></tr>
-</table>
-
-### <code>dependency</code>
-<table>
-    <tr><td>xfce-polkit</td><td>authentication agent</td></tr>
-    <tr><td>xdg-desktop-portal-hyprland</td><td>XDG Desktop Portal</td></tr>
-    <tr><td>pacman-contrib</td><td>system update check</td></tr>
-    <tr><td>parallel</td><td>parallel processing</td></tr>
-    <tr><td>jq</td><td>read json</td></tr>
-    <tr><td>imagemagick</td><td>image processing</td></tr>
-    <tr><td>ffmpeg</td><td>image processing</td></tr>
-    <tr><td>pamixer</td><td>waybar audio</td></tr>
-    <tr><td>fcitx5</td><td>input method</td></tr>
-    <tr><td>fcitx5-qt</td><td>input method</td></tr>
-    <tr><td>fcitx5-gtk</td><td>input method</td></tr>
-    <tr><td>fcitx5-configtool</td><td>input method</td></tr>
-</table>
-
-### <code>theme</code>
-<table>
-    <tr><td>nwg-look</td><td>theming GTK apps</td></tr>
-    <tr><td>kvantum</td><td>theming QT apps</td></tr>
-    <tr><td>qt6ct</td><td>theming QT6 apps</td></tr>
-</table>
-
-### <code>apps</code>
-<table>
-    <tr><td>vivaldi</td><td>browser</td></tr>
-    <tr><td>telegram-desktop</td><td>messenger</td></tr>
-    <tr><td>alacritty</td><td>terminal</td></tr>
-    <tr><td>neofetch</td><td>fetch tool</td></tr>
-    <tr><td>btop</td><td>system monitor</td></tr>
-    <tr><td>qtfm</td><td>file manager</td></tr>
-    <tr><td>visual-studio-code-bin</td><td>gui code editor</td></tr>
-    <tr><td>nano</td><td>text editor</td></tr>
-    <tr><td>p7zip</td><td>file archiver</td></tr>
-    <tr><td>qbittorrent</td><td>torrent tracker</td></tr>
-</table>
-
-### <code>shell</code>
-<table>
-    <tr><td>zsh</td><td>main shell</td></tr>
-    <tr><td>lsd</td><td>colorful file lister</td></tr>
-    <tr><td>fzf</td><td>command line fuzzy finder</td></tr>
-</table>
 
 ## Keybindings
 
 ### <code>Windows/Session actions</code>
 <table>
     <tr><td><kbd>Super</kbd> + <kbd>Q</kbd></td><td>quit active/focused window</td></tr>
-    <tr><td><kbd>Alt</kbd> + <kbd>F4</kbd></td><td>quit active/focused window</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>Del</kbd></td><td>quit hyprland session</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>W</kbd></td><td>toggle window on focus to float</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>J</kbd></td><td>toggle layout</td></tr>
@@ -192,15 +45,12 @@ Please reboot after the install script completes and takes you to sddm login scr
 ### <code>Apps</code>
 <table>
     <tr><td><kbd>Super</kbd> + <kbd>T</kbd></td><td>launch alacritty terminal</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>E</kbd></td><td>launch file manager</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>C</kbd></td><td>launch vscode</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>B</kbd></td><td>launch vivaldi browser</td></tr>
 </table>
 
 ### <code>Rofi</code>
 <table>
     <tr><td><kbd>Super</kbd> + <kbd>A</kbd></td><td>launch desktop applications</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Tab</kbd></td><td>switch between opened applications</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>R</kbd></td><td>browse system files</td></tr>
 </table>
 
@@ -219,13 +69,6 @@ Please reboot after the install script completes and takes you to sddm login scr
 
 ### <code>Custom scripts</code>
 <table>
-    <tr><td><kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd></td><td>disable hypr effects for gamemode</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>←</kbd><kbd>→</kbd></td><td>previous / next wallpaper</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>↓</kbd><kbd>↑</kbd></td><td>previous / next waybar mode</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></td><td>toggle (theme <//> wall) based colors</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td><td>theme select menu</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd></td><td>rofi style select menu</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd></td><td>wallpaper select menu</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>V</kbd></td><td>clipboard history paste</td></tr>
 </table>
 
@@ -240,7 +83,6 @@ Please reboot after the install script completes and takes you to sddm login scr
     <tr><td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>←</kbd><kbd>→</kbd></td><td>switch workspaces relative to the active one</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>MouseScroll</kbd></td><td>cycle through workspaces</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>↓</kbd></td><td>move to first empty workspace</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>[1-5]</kbd></td><td>switch to workspace [1-5]</td></tr>
 </table>
 
 ### <code>Move windows</code>
@@ -248,8 +90,6 @@ Please reboot after the install script completes and takes you to sddm login scr
     <tr><td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd></td><td>move active window within the current workspace</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>LeftClick</kbd></td><td>change the window position (drag)</td></tr>
     <tr><td><kbd>Super</kbd> + <kbd>RightClick</kbd></td><td>resize the window (drag)</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>[1-5]</kbd></td><td>move active window to workspace [1-5]</td></tr>
-    <tr><td><kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>[1-5]</kbd></td><td>move active window to workspace [1-5] (silently)</td></tr>
 </table>
 
 ### <code>Special workspace</code>

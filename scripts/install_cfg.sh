@@ -23,15 +23,7 @@ cat ./lists/install_cfg.lst | while read -r lst; do
 
   pth=$(echo "$lst" | awk -F '|' '{print $1}')
   cfg=$(echo "$lst" | awk -F '|' '{print $2}')
-  pkg=$(echo "$lst" | awk -F '|' '{print $3}')
   pth=$(eval echo "$pth")
-
-  while read -r pkg_chk; do
-    if ! pkg_installed "$pkg_chk"; then
-      echo "skipping ${cfg}..."
-      continue 2
-    fi
-  done < <(echo "${pkg}" | xargs -n 1)
 
   echo "${cfg}" | xargs -n 1 | while read -r cfg_chk; do
     tgt=$(echo $pth | sed "s+^${HOME}++g")
@@ -59,6 +51,5 @@ done
 touch "${HOME}"/.config/hypr/monitors.conf
 touch "${HOME}"/.config/hypr/userprefs.conf
 
-./scripts/create_cache.sh
 ./scripts/install_zsh.sh
 ./scripts/install_lnk.sh

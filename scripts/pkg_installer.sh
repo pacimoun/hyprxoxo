@@ -71,12 +71,13 @@ while read -r pkg; do
   fi
 
   if pkg_installed "$pkg"; then
-    echo "$pkg is already installed..."
-  elif pkg_available "$pkg" | aur_available "$pkg"; then
-    echo "queueing $pkg..."
-    pkg_lst+="$pkg "
+    echo "$pkg is already installed"
+  elif pkg_available "$pkg"; then
+    pacman_pkgs+=("$pkg")
+  elif [ -n "${aurhlpr:-}" ] && aur_available "$pkg"; then
+    aur_pkgs+=("$pkg")
   else
-    echo "error: $pkg not found in arch or aur repo..."
+    echo "ERROR: package not found: $pkg"
   fi
 done < <(cut -d '#' -f 1 "$install_list")
 
